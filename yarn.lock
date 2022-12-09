@@ -2004,7 +2004,7 @@
     reselect "^4.0.0"
     yup "^0.32.9"
 
-"@strapi/plugin-documentation@^4.5.3":
+"@strapi/plugin-documentation@4.5.3":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@strapi/plugin-documentation/-/plugin-documentation-4.5.3.tgz#f30cef8f1d6bce67ef045956971622cccc4b2bbe"
   integrity sha512-RHT6N6aPq2nlOsO8rHL0bw7G2R8PMOn4dmtSdBbRTtvCeK9HZLTC4i0gJFAZqhLimO7KTTy4dkWu8sb2Csb+zQ==
