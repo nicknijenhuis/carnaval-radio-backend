@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-09T14:40:17.581Z"
+    "x-generation-date": "2022-12-09T14:53:47.218Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -102,6 +102,9 @@
               },
               "Content": {
                 "type": "string"
+              },
+              "Slug": {
+                "type": "string"
               }
             }
           }
@@ -120,6 +123,9 @@
                 "type": "string"
               },
               "Content": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               },
               "createdAt": {
@@ -436,6 +442,9 @@
                 "type": "string"
               },
               "Content": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               },
               "createdAt": {
@@ -787,6 +796,9 @@
               "Content": {
                 "type": "string"
               },
+              "Slug": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -1101,6 +1113,9 @@
                 "type": "string"
               },
               "Content": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               },
               "createdAt": {
@@ -1439,6 +1454,9 @@
                 "example": "string or id"
               },
               "Text": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               }
             }
@@ -2079,6 +2097,9 @@
                 }
               },
               "Text": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               },
               "createdAt": {
@@ -3016,6 +3037,9 @@
                 }
               },
               "Text": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               },
               "createdAt": {
@@ -3988,6 +4012,9 @@
               "Text": {
                 "type": "string"
               },
+              "Slug": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -4923,6 +4950,9 @@
                 }
               },
               "Text": {
+                "type": "string"
+              },
+              "Slug": {
                 "type": "string"
               },
               "createdAt": {
