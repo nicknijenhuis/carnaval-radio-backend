@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sponsor_types",
+  "info": {
+    "singularName": "sponsor-type",
+    "pluralName": "sponsor-types",
+    "displayName": "Sponsor type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": true
+    },
+    "Order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

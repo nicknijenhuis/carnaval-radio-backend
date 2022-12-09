@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "streams",
+  "info": {
+    "singularName": "stream",
+    "pluralName": "streams",
+    "displayName": "Stream"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Link": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Order": {
+      "type": "integer"
+    }
+  }
+}
