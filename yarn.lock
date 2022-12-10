@@ -2146,7 +2146,7 @@
     "@strapi/utils" "4.5.3"
     fs-extra "10.0.0"
 
-"@strapi/strapi@4.5.3":
+"@strapi/strapi@4.5.3", "@strapi/strapi@^4.1.9":
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/@strapi/strapi/-/strapi-4.5.3.tgz#58f77d156174d3f033dc728fbdfd75f5bb150dac"
   integrity sha512-0bchE7StgopID01yxYmoCZ2QWP6kYKS3yvobf4TCOQNteU7m08deyDaFSsbgtXJj2CrXNdnnzQE5Q9HBlHqIYA==
@@ -3231,6 +3231,13 @@ axios@0.27.2, axios@^0.27.2:
   dependencies:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
+
+axios@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+  dependencies:
+    follow-redirects "^1.14.8"
 
 babel-loader@8.2.5:
   version "8.2.5"
@@ -5457,7 +5464,7 @@ fn.name@1.x.x:
   resolved "https://registry.yarnpkg.com/fn.name/-/fn.name-1.1.0.tgz#26cad8017967aea8731bc42961d04a3d5988accc"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.9:
+follow-redirects@^1.0.0, follow-redirects@^1.14.8, follow-redirects@^1.14.9:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -8862,7 +8869,7 @@ react-helmet@^6.1.0:
     react-fast-compare "^3.1.1"
     react-side-effect "^2.1.0"
 
-react-intl@5.25.1, react-intl@^5.24.6:
+react-intl@5.25.1, react-intl@^5.24.6, react-intl@^5.25.1:
   version "5.25.1"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-5.25.1.tgz#68a73aefc485c9bf70062381ae7f6f4791680879"
   integrity sha512-pkjdQDvpJROoXLMltkP/5mZb0/XqrqLoPGKUCfbdkP8m6U9xbK40K51Wu+a4aQqTEvEK5lHBk0fWzUV72SJ3Hg==
@@ -9959,6 +9966,15 @@ strapi-plugin-menus@^1.1.0:
     react-router-dom "^6.2.1"
     react-select "^5.2.2"
     styled-components "^5.3.3"
+
+strapi-plugin-netlify-deployments@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-netlify-deployments/-/strapi-plugin-netlify-deployments-2.0.0.tgz#22aa0bac605382ffba02425838ab6bb439cb8af1"
+  integrity sha512-U3A66lsbze9mZSK1XlxFgKTc8yqKmAx1KHivmhx1stOmwfnucvWtuAIiDcA5GSxR9i23+IYzy5lAsu1gYZodYg==
+  dependencies:
+    "@strapi/strapi" "^4.1.9"
+    axios "^0.26.1"
+    react-intl "^5.25.1"
 
 strapi-plugin-slugify@^2.3.2:
   version "2.3.2"
