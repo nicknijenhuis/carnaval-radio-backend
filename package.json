@@ -16,7 +16,7 @@
     "@strapi/plugin-i18n": "4.5.3",
     "@strapi/plugin-users-permissions": "4.5.3",
     "@strapi/strapi": "4.5.3",
-    "better-sqlite3": "7.4.6",
+    "better-sqlite3": "8.0.1",
     "strapi-plugin-menus": "^1.1.0",
     "strapi-plugin-slugify": "^2.3.2"
   },
