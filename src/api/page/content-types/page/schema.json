@@ -21,6 +21,14 @@
     "Slug": {
       "type": "uid",
       "targetField": "Title"
+    },
+    "Slider": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
