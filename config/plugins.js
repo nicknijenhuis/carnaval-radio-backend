@@ -27,4 +27,21 @@ module.exports = ({ env }) => ({
         },
       },
     },
+    menus: {
+      config: {
+        layouts: {
+          menuItem: {
+            link: [
+              {
+                input: {
+                  label: 'Page',
+                  name: 'Page',
+                  type: 'relation'
+                }
+              },
+            ],
+          },
+        },
+      },
+    },
   });
