@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-11T00:19:41.809Z"
+    "x-generation-date": "2022-12-12T16:05:28.146Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5294,7 +5294,7 @@
               "Name": {
                 "type": "string"
               },
-              "Image": {
+              "Logo": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -5315,6 +5315,14 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "ActiveFrom": {
+                "type": "string",
+                "format": "date"
+              },
+              "ActiveUntil": {
+                "type": "string",
+                "format": "date"
               }
             }
           }
@@ -5332,7 +5340,7 @@
               "Name": {
                 "type": "string"
               },
-              "Image": {
+              "Logo": {
                 "type": "object",
                 "properties": {
                   "data": {
@@ -6269,6 +6277,14 @@
                     }
                   }
                 }
+              },
+              "ActiveFrom": {
+                "type": "string",
+                "format": "date"
+              },
+              "ActiveUntil": {
+                "type": "string",
+                "format": "date"
               },
               "createdAt": {
                 "type": "string",
@@ -6332,7 +6348,7 @@
               "Name": {
                 "type": "string"
               },
-              "Image": {
+              "Logo": {
                 "type": "object",
                 "properties": {
                   "data": {
@@ -7269,6 +7285,14 @@
                     }
                   }
                 }
+              },
+              "ActiveFrom": {
+                "type": "string",
+                "format": "date"
+              },
+              "ActiveUntil": {
+                "type": "string",
+                "format": "date"
               },
               "createdAt": {
                 "type": "string",
@@ -7365,7 +7389,7 @@
               "Name": {
                 "type": "string"
               },
-              "Image": {
+              "Logo": {
                 "type": "object",
                 "properties": {
                   "data": {
@@ -8302,6 +8326,14 @@
                     }
                   }
                 }
+              },
+              "ActiveFrom": {
+                "type": "string",
+                "format": "date"
+              },
+              "ActiveUntil": {
+                "type": "string",
+                "format": "date"
               },
               "createdAt": {
                 "type": "string",
@@ -8365,7 +8397,7 @@
               "Name": {
                 "type": "string"
               },
-              "Image": {
+              "Logo": {
                 "type": "object",
                 "properties": {
                   "data": {
@@ -9302,6 +9334,14 @@
                     }
                   }
                 }
+              },
+              "ActiveFrom": {
+                "type": "string",
+                "format": "date"
+              },
+              "ActiveUntil": {
+                "type": "string",
+                "format": "date"
               },
               "createdAt": {
                 "type": "string",
@@ -10681,17 +10721,22 @@
         ],
         "properties": {
           "data": {
-            "required": [],
+            "required": [
+              "IsActive"
+            ],
             "type": "object",
             "properties": {
-              "Link": {
+              "Name": {
                 "type": "string"
               },
-              "Name": {
+              "Link": {
                 "type": "string"
               },
               "Order": {
                 "type": "integer"
+              },
+              "IsActive": {
+                "type": "boolean"
               }
             }
           }
@@ -10706,14 +10751,17 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "Link": {
+              "Name": {
                 "type": "string"
               },
-              "Name": {
+              "Link": {
                 "type": "string"
               },
               "Order": {
                 "type": "integer"
+              },
+              "IsActive": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -11021,14 +11069,17 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "Link": {
+              "Name": {
                 "type": "string"
               },
-              "Name": {
+              "Link": {
                 "type": "string"
               },
               "Order": {
                 "type": "integer"
+              },
+              "IsActive": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -11369,14 +11420,17 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "Link": {
+              "Name": {
                 "type": "string"
               },
-              "Name": {
+              "Link": {
                 "type": "string"
               },
               "Order": {
                 "type": "integer"
+              },
+              "IsActive": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -11684,14 +11738,17 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "Link": {
+              "Name": {
                 "type": "string"
               },
-              "Name": {
+              "Link": {
                 "type": "string"
               },
               "Order": {
                 "type": "integer"
+              },
+              "IsActive": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",

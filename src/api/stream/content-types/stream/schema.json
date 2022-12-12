@@ -4,17 +4,18 @@
   "info": {
     "singularName": "stream",
     "pluralName": "streams",
-    "displayName": "Stream"
+    "displayName": "Stream",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "Link": {
+    "Name": {
       "type": "string"
     },
-    "Name": {
+    "Link": {
       "type": "string"
     },
     "Order": {

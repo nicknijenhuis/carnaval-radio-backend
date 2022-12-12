@@ -15,21 +15,24 @@
     "Name": {
       "type": "string"
     },
-    "Image": {
+    "Logo": {
       "type": "media",
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "Type": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::sponsor-type.sponsor-type"
+    },
+    "ActiveFrom": {
+      "type": "date"
+    },
+    "ActiveUntil": {
+      "type": "date"
     }
   }
 }
