@@ -4,6 +4,8 @@ module.exports = plugin => {
 
   // Define custom attributes for `MenuItem` the same way they would be defined
   // on any other schema.
+
+  // ISSUE Currently not working because of https://github.com/mattmilburn/strapi-plugin-menus/issues/62
   const customAttrs = {
     Page: {
         type: "relation",
