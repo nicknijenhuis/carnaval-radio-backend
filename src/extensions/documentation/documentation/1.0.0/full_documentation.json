@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-12T16:09:04.157Z"
+    "x-generation-date": "2022-12-12T16:16:13.011Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5981,6 +5981,16 @@
                           "Order": {
                             "type": "integer"
                           },
+                          "LogoSize": {
+                            "type": "string",
+                            "enum": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                            ]
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -6988,6 +6998,16 @@
                           },
                           "Order": {
                             "type": "integer"
+                          },
+                          "LogoSize": {
+                            "type": "string",
+                            "enum": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                            ]
                           },
                           "createdAt": {
                             "type": "string",
@@ -8030,6 +8050,16 @@
                           "Order": {
                             "type": "integer"
                           },
+                          "LogoSize": {
+                            "type": "string",
+                            "enum": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                            ]
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -9038,6 +9068,16 @@
                           "Order": {
                             "type": "integer"
                           },
+                          "LogoSize": {
+                            "type": "string",
+                            "enum": [
+                              "S",
+                              "M",
+                              "L",
+                              "XL",
+                              "XXL"
+                            ]
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -9412,7 +9452,9 @@
         ],
         "properties": {
           "data": {
-            "required": [],
+            "required": [
+              "LogoSize"
+            ],
             "type": "object",
             "properties": {
               "Name": {
@@ -9420,6 +9462,16 @@
               },
               "Order": {
                 "type": "integer"
+              },
+              "LogoSize": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL",
+                  "XXL"
+                ]
               }
             }
           }
@@ -9439,6 +9491,16 @@
               },
               "Order": {
                 "type": "integer"
+              },
+              "LogoSize": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL",
+                  "XXL"
+                ]
               },
               "createdAt": {
                 "type": "string",
@@ -9751,6 +9813,16 @@
               },
               "Order": {
                 "type": "integer"
+              },
+              "LogoSize": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL",
+                  "XXL"
+                ]
               },
               "createdAt": {
                 "type": "string",
@@ -10097,6 +10169,16 @@
               "Order": {
                 "type": "integer"
               },
+              "LogoSize": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL",
+                  "XXL"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -10408,6 +10490,16 @@
               },
               "Order": {
                 "type": "integer"
+              },
+              "LogoSize": {
+                "type": "string",
+                "enum": [
+                  "S",
+                  "M",
+                  "L",
+                  "XL",
+                  "XXL"
+                ]
               },
               "createdAt": {
                 "type": "string",

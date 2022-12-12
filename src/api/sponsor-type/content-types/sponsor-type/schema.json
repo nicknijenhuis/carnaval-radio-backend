@@ -19,6 +19,18 @@
     "Order": {
       "type": "integer",
       "default": 0
+    },
+    "LogoSize": {
+      "type": "enumeration",
+      "enum": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "required": true,
+      "default": "L"
     }
   }
 }
