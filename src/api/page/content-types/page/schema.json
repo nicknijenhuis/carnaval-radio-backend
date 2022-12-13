@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Content": {
       "type": "richtext"
@@ -23,12 +24,13 @@
       "targetField": "Title"
     },
     "Slider": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }

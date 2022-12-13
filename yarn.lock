@@ -10353,13 +10353,6 @@ strapi-plugin-netlify-deployments@^2.0.0:
     axios "^0.26.1"
     react-intl "^5.25.1"
 
-strapi-plugin-slugify@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/strapi-plugin-slugify/-/strapi-plugin-slugify-2.3.2.tgz#5f87886e253ca34d738e9b84e96d1db724a3af53"
-  integrity sha512-gZbZ+jdZYmSjjCdNR5WEhAcF7cokAX3wGlz7+vVgGpsp/ayvZACyWQzyqgfHbbqzjVtPFOi40Clp0OeRtfCHGg==
-  dependencies:
-    "@sindresorhus/slugify" "1.1.0"
-
 stream-browserify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"
