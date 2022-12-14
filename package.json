@@ -2,7 +2,7 @@
   "name": "carnaval-radio-backend",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Carnaval-Radio Backend",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -24,7 +24,7 @@
     "strapi-plugin-netlify-deployments": "^2.0.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Nick Nijenhuis"
   },
   "strapi": {
     "uuid": "8185f515-8a0c-4c62-9393-608dda418055"
