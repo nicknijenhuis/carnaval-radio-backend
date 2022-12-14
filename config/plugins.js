@@ -1,33 +1,40 @@
-module.exports = ({ env }) => ({
+const { isTrue } = require("../utils/isTrue");
+
+module.exports = ({ env }) => {
+  const useCloudinary = isTrue(env("USE_CLOUDINARY", false));
+
+  return {
     "netlify-deployments": {
       enabled: true,
       config: {
-        accessToken: env('NETLIFY_ACCESS_TOKEN'),
+        accessToken: env("NETLIFY_ACCESS_TOKEN"),
         sites: [
           {
-            name: env('NETLIFY_NAME'),
-            id: env('NETLIFY_ID'),
-            buildHook: "https://api.netlify.com/build_hooks/" + env('NETLIFY_HOOK_ID'),
-            branch: 'main' // optional
-          }
-        ]
-      }
-    },
-    // TODO make this configrurable per environment
-    commentedupload: {
-      config: {
-        provider: 'cloudinary',
-        providerOptions: {
-          cloud_name: env('CLOUDINARY_NAME'),
-          api_key: env('CLOUDINARY_KEY'),
-          api_secret: env('CLOUDINARY_SECRET'),
-        },
-        actionOptions: {
-          upload: {},
-          delete: {},
-        },
+            name: env("NETLIFY_NAME"),
+            id: env("NETLIFY_ID"),
+            buildHook:
+              "https://api.netlify.com/build_hooks/" + env("NETLIFY_HOOK_ID"),
+            branch: "main", // optional
+          },
+        ],
       },
     },
+    upload: useCloudinary
+      ? {
+          config: {
+            provider: "cloudinary",
+            providerOptions: {
+              cloud_name: env("CLOUDINARY_NAME"),
+              api_key: env("CLOUDINARY_KEY"),
+              api_secret: env("CLOUDINARY_SECRET"),
+            },
+            actionOptions: {
+              upload: {},
+              delete: {},
+            },
+          },
+        }
+      : null,
     menus: {
       config: {
         layouts: {
@@ -35,14 +42,15 @@ module.exports = ({ env }) => ({
             link: [
               {
                 input: {
-                  label: 'Page',
-                  name: 'Page',
-                  type: 'relation'
-                }
+                  label: "Page",
+                  name: "Page",
+                  type: "relation",
+                },
               },
             ],
           },
         },
       },
     },
-  });
+  };
+};
