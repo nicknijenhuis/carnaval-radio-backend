@@ -13,7 +13,8 @@ module.exports = ({ env }) => ({
         ]
       }
     },
-    upload: {
+    // TODO make this configrurable per environment
+    commentedupload: {
       config: {
         provider: 'cloudinary',
         providerOptions: {
