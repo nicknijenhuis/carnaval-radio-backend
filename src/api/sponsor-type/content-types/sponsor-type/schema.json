@@ -31,6 +31,19 @@
       ],
       "required": true,
       "default": "L"
+    },
+    "ShowOnHomePage": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "ShowAudioPlayerFixed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "ShowAudioPlayerRotating": {
+      "type": "boolean"
     }
   }
 }

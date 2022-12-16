@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-14T23:43:18.207Z"
+    "x-generation-date": "2022-12-16T10:44:59.253Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8488,6 +8488,15 @@
                               "XXL"
                             ]
                           },
+                          "ShowOnHomePage": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerFixed": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerRotating": {
+                            "type": "boolean"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -9505,6 +9514,15 @@
                               "XL",
                               "XXL"
                             ]
+                          },
+                          "ShowOnHomePage": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerFixed": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerRotating": {
+                            "type": "boolean"
                           },
                           "createdAt": {
                             "type": "string",
@@ -10557,6 +10575,15 @@
                               "XXL"
                             ]
                           },
+                          "ShowOnHomePage": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerFixed": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerRotating": {
+                            "type": "boolean"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -11575,6 +11602,15 @@
                               "XXL"
                             ]
                           },
+                          "ShowOnHomePage": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerFixed": {
+                            "type": "boolean"
+                          },
+                          "ShowAudioPlayerRotating": {
+                            "type": "boolean"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -11950,7 +11986,9 @@
         "properties": {
           "data": {
             "required": [
-              "LogoSize"
+              "LogoSize",
+              "ShowOnHomePage",
+              "ShowAudioPlayerFixed"
             ],
             "type": "object",
             "properties": {
@@ -11969,6 +12007,15 @@
                   "XL",
                   "XXL"
                 ]
+              },
+              "ShowOnHomePage": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerFixed": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerRotating": {
+                "type": "boolean"
               }
             }
           }
@@ -11998,6 +12045,15 @@
                   "XL",
                   "XXL"
                 ]
+              },
+              "ShowOnHomePage": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerFixed": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerRotating": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -12320,6 +12376,15 @@
                   "XL",
                   "XXL"
                 ]
+              },
+              "ShowOnHomePage": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerFixed": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerRotating": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -12676,6 +12741,15 @@
                   "XXL"
                 ]
               },
+              "ShowOnHomePage": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerFixed": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerRotating": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -12997,6 +13071,15 @@
                   "XL",
                   "XXL"
                 ]
+              },
+              "ShowOnHomePage": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerFixed": {
+                "type": "boolean"
+              },
+              "ShowAudioPlayerRotating": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
