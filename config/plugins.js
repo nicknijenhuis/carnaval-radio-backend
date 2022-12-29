@@ -4,21 +4,6 @@ module.exports = ({ env }) => {
   const useCloudinary = isTrue(env("USE_CLOUDINARY", false));
 
   return {
-    "netlify-deployments": {
-      enabled: true,
-      config: {
-        accessToken: env("NETLIFY_ACCESS_TOKEN"),
-        sites: [
-          {
-            name: env("NETLIFY_NAME"),
-            id: env("NETLIFY_ID"),
-            buildHook:
-              "https://api.netlify.com/build_hooks/" + env("NETLIFY_HOOK_ID"),
-            branch: "main", // optional
-          },
-        ],
-      },
-    },
     upload: useCloudinary
       ? {
           config: {
@@ -35,22 +20,5 @@ module.exports = ({ env }) => {
           },
         }
       : null,
-    menus: {
-      config: {
-        layouts: {
-          menuItem: {
-            link: [
-              {
-                input: {
-                  label: "Page",
-                  name: "Page",
-                  type: "relation",
-                },
-              },
-            ],
-          },
-        },
-      },
-    },
   };
 };

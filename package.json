@@ -19,9 +19,7 @@
     "@strapi/provider-upload-cloudinary": "^4.5.3",
     "@strapi/strapi": "4.5.3",
     "better-sqlite3": "8.0.1",
-    "pg": "^8.8.0",
-    "strapi-plugin-menus": "^1.2.0",
-    "strapi-plugin-netlify-deployments": "^2.0.0"
+    "pg": "^8.8.0"
   },
   "author": {
     "name": "Nick Nijenhuis"
