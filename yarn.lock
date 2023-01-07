@@ -2060,14 +2060,14 @@
     "@strapi/utils" "4.5.3"
     lodash "4.17.21"
 
-"@strapi/plugin-graphql@^4.5.3":
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-graphql/-/plugin-graphql-4.5.5.tgz#eca9846265e2b94413d78a416b3190480dd076a7"
-  integrity sha512-mDO14+eqdDZenb3fD8U4QoMw41tlSEzuFsEGxE2/qgfbdLGwynFS/cMI2+wR+P0dpDMEyVJUAsyPambykYrYkQ==
+"@strapi/plugin-graphql@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-graphql/-/plugin-graphql-4.5.3.tgz#787dc4a3c6abfaf667cfd9b34092c13cae8818f3"
+  integrity sha512-pre+JDwE2SExYYeMPDDfzPeXYAaPMlG6tAn9bOJArziaAkfQ+Uwg+7NLp/eOZg5AMg3oZvba7e/x2t3EImSjeA==
   dependencies:
     "@graphql-tools/schema" "8.5.1"
     "@graphql-tools/utils" "^8.12.0"
-    "@strapi/utils" "4.5.5"
+    "@strapi/utils" "4.5.3"
     apollo-server-core "3.1.2"
     apollo-server-koa "3.10.0"
     glob "^7.1.7"
