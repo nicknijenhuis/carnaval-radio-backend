@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "editor.rulers": [100],
+    "files.eol": "\n",
+    "workbench.colorCustomizations": {
+        "titleBar.inactiveForeground": "#cecececc",
+        "titleBar.inactiveBackground": "#8f0000b9",
+        "titleBar.activeForeground": "#cecececc",
+        "titleBar.activeBackground": "#8f0000b9"
+    },
+}
