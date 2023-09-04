@@ -32,5 +32,30 @@ module.exports = ({ env }) => {
         },
       },
     },
+    navigation: {
+      enabled: true,
+      config: {
+        additionalFields: [
+          {
+            name: "Icon",
+            type: "string",
+            label: "Icon",
+          },
+        ],
+        contentTypes: ["api::page.page", "api::article.article"],
+        contentTypesNameFields: {
+          "api::page.page": ["Title"],
+          "api::article.article": ["Title"],
+        },
+        pathDefaultFields: {
+          "api::page.page": ["Slug"],
+          "api::article.article": ["Slug"],
+        },
+        allowedLevels: 3,
+        gql: {
+          navigationItemRelated: ["Page", "UploadFile", "Article"],
+        },
+      },
+    },
   };
 };
