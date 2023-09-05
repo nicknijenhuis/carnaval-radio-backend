@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,22 @@
     },
     "Link": {
       "type": "string"
+    },
+    "CoverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "IsHighlighted": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   }
 }
