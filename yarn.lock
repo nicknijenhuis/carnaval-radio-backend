@@ -1551,6 +1551,23 @@
     react-query "3.39.3"
     react-select "5.7.0"
 
+"@strapi/helper-plugin@4.13.3":
+  version "4.13.3"
+  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.13.3.tgz#2a34c468b6c305e0aa3a01d19bc043c0dd4123b1"
+  integrity sha512-kKi9nITwYo2SRsQhJ72UDgDWgQeHH1T4h8MjwuAT/5rCnYdXNTxjw147jqHOrFjmnd3xyLyDidTGER7dXi30DQ==
+  dependencies:
+    axios "1.5.0"
+    date-fns "2.30.0"
+    formik "2.4.0"
+    immer "9.0.19"
+    lodash "4.17.21"
+    prop-types "^15.8.1"
+    qs "6.11.1"
+    react-helmet "^6.1.0"
+    react-intl "6.4.1"
+    react-query "3.39.3"
+    react-select "5.7.0"
+
 "@strapi/icons@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-1.9.0.tgz#a3d12f965e8a42082cc83149af8fb0a5e610dfe8"
@@ -1657,18 +1674,18 @@
     react-intl "6.4.1"
     yup "0.32.9"
 
-"@strapi/plugin-graphql@4.12.7":
-  version "4.12.7"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-graphql/-/plugin-graphql-4.12.7.tgz#1627b2c0742f4fe9b19b86f8c98aa4d819f94722"
-  integrity sha512-3Y3+gS2ZLLq7r9mdwESTuFrn9iYlkMjtRfwphNt680YgLzBtRieRdBhDS2cVptDFWxDHBsqusRZLUHrAPLI1wg==
+"@strapi/plugin-graphql@4.13.3":
+  version "4.13.3"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-graphql/-/plugin-graphql-4.13.3.tgz#03dc80cbc41b00d180a9053a5d75c0f584a1a769"
+  integrity sha512-6K0pc3Yv6KJbFmYq1rwokXRuf3f47uKBhMCg6q9o3HZ/QfCO9YGYc6aAyS7h19A3fkqM9bwk3Qd+57JEGbL6YA==
   dependencies:
     "@graphql-tools/schema" "8.5.1"
     "@graphql-tools/utils" "^8.13.1"
     "@strapi/design-system" "1.9.0"
-    "@strapi/helper-plugin" "4.12.7"
+    "@strapi/helper-plugin" "4.13.3"
     "@strapi/icons" "1.9.0"
-    "@strapi/utils" "4.12.7"
-    apollo-server-core "3.12.0"
+    "@strapi/utils" "4.13.3"
+    apollo-server-core "3.12.1"
     apollo-server-koa "3.10.0"
     glob "7.2.3"
     graphql "^15.5.1"
@@ -1900,10 +1917,10 @@
     p-map "4.0.0"
     yup "0.32.9"
 
-"@strapi/utils@^4.13.1":
-  version "4.13.1"
-  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.13.1.tgz#03f9fee871481af4abb55733aeb21f61a3c64cec"
-  integrity sha512-IW0ac0aeJbE6wptzW/7yZ4KPwRaqshHtNPCOrWAnG0L1Is/UkpwVUBUSmWq12m1utJF+nIenwgHH8jbKYolhFw==
+"@strapi/utils@4.13.3", "@strapi/utils@^4.13.1":
+  version "4.13.3"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.13.3.tgz#847fc6a463c720154de942f555c049923147b9e6"
+  integrity sha512-+O8JbQ7GOKAI9BJQaZogkx2vlIkgG3qbROG/nWLDxbwSMfyYyHmXYODgYft2Q0MeruBYqAiKJz6Pu9GIGM+reg==
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.30.0"
@@ -2667,10 +2684,10 @@ apollo-reporting-protobuf@^3.4.0:
   dependencies:
     "@apollo/protobufjs" "1.2.6"
 
-apollo-server-core@3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-3.12.0.tgz#8aa2a7329ce6fe1823290c45168c749db01548df"
-  integrity sha512-hq7iH6Cgldgmnjs9FVSZeKWRpi0/ZR+iJ1arzeD2VXGxxgk1mAm/cz1Tx0TYgegZI+FvvrRl0UhKEx7sLnIxIg==
+apollo-server-core@3.12.1, apollo-server-core@^3.10.0:
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-3.12.1.tgz#ba255c37345db29c48a2e0c064c519a8d62eb5af"
+  integrity sha512-9SF5WAkkV0FZQ2HVUWI9Jada1U0jg7e8NCN9EklbtvaCeUlOLyXyM+KCWuZ7+dqHxjshbtcwylPHutt3uzoNkw==
   dependencies:
     "@apollo/utils.keyvaluecache" "^1.0.1"
     "@apollo/utils.logger" "^1.0.0"
@@ -2686,35 +2703,6 @@ apollo-server-core@3.12.0:
     apollo-server-errors "^3.3.1"
     apollo-server-plugin-base "^3.7.2"
     apollo-server-types "^3.8.0"
-    async-retry "^1.2.1"
-    fast-json-stable-stringify "^2.1.0"
-    graphql-tag "^2.11.0"
-    loglevel "^1.6.8"
-    lru-cache "^6.0.0"
-    node-abort-controller "^3.0.1"
-    sha.js "^2.4.11"
-    uuid "^9.0.0"
-    whatwg-mimetype "^3.0.0"
-
-apollo-server-core@^3.10.0:
-  version "3.11.1"
-  resolved "https://registry.yarnpkg.com/apollo-server-core/-/apollo-server-core-3.11.1.tgz#89d83aeaa71a59f760ebfa35bb0cbd31e15474ca"
-  integrity sha512-t/eCKrRFK1lYZlc5pHD99iG7Np7CEm3SmbDiONA7fckR3EaB/pdsEdIkIwQ5QBBpT5JLp/nwvrZRVwhaWmaRvw==
-  dependencies:
-    "@apollo/utils.keyvaluecache" "^1.0.1"
-    "@apollo/utils.logger" "^1.0.0"
-    "@apollo/utils.usagereporting" "^1.0.0"
-    "@apollographql/apollo-tools" "^0.5.3"
-    "@apollographql/graphql-playground-html" "1.6.29"
-    "@graphql-tools/mock" "^8.1.2"
-    "@graphql-tools/schema" "^8.0.0"
-    "@josephg/resolvable" "^1.0.0"
-    apollo-datasource "^3.3.2"
-    apollo-reporting-protobuf "^3.3.3"
-    apollo-server-env "^4.2.1"
-    apollo-server-errors "^3.3.1"
-    apollo-server-plugin-base "^3.7.1"
-    apollo-server-types "^3.7.1"
     async-retry "^1.2.1"
     fast-json-stable-stringify "^2.1.0"
     graphql-tag "^2.11.0"
@@ -2754,13 +2742,6 @@ apollo-server-koa@3.10.0:
     koa-bodyparser "^4.3.0"
     koa-compose "^4.1.0"
 
-apollo-server-plugin-base@^3.7.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/apollo-server-plugin-base/-/apollo-server-plugin-base-3.7.1.tgz#aa78ef49bd114e35906ca9cf7493fed2664cbde8"
-  integrity sha512-g3vJStmQtQvjGI289UkLMfThmOEOddpVgHLHT2bNj0sCD/bbisj4xKbBHETqaURokteqSWyyd4RDTUe0wAUDNQ==
-  dependencies:
-    apollo-server-types "^3.7.1"
-
 apollo-server-plugin-base@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/apollo-server-plugin-base/-/apollo-server-plugin-base-3.7.2.tgz#c19cd137bc4c993ba2490ba2b571b0f3ce60a0cd"
@@ -2768,7 +2749,7 @@ apollo-server-plugin-base@^3.7.2:
   dependencies:
     apollo-server-types "^3.8.0"
 
-apollo-server-types@^3.6.2, apollo-server-types@^3.7.1:
+apollo-server-types@^3.6.2:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/apollo-server-types/-/apollo-server-types-3.7.1.tgz#87adfcb52ec0893999a9cfafd5474bfda7ab0798"
   integrity sha512-aE9RDVplmkaOj/OduNmGa+0a1B5RIWI0o3zC1zLvBTVWMKTpo0ifVf11TyMkLCY+T7cnZqVqwyShziOyC3FyUw==
@@ -2898,6 +2879,15 @@ axios@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
   integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
+axios@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.5.0.tgz#f02e4af823e2e46a9768cfc74691fdd0517ea267"
+  integrity sha512-D4DdjDo5CY50Qms0qGQTTw6Q44jl7zRwY7bthds06pUGfChBCTcQs+N743eFWGEd6pRTMd6A+I87aWyFV5wiZQ==
   dependencies:
     follow-redirects "^1.15.0"
     form-data "^4.0.0"
