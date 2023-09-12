@@ -20,18 +20,6 @@ module.exports = ({ env }) => {
           },
         }
       : null,
-    graphql: {
-      config: {
-        endpoint: "/graphql",
-        shadowCRUD: true,
-        playgroundAlways: true,
-        depthLimit: 7,
-        amountLimit: 100,
-        apolloServer: {
-          tracing: false,
-        },
-      },
-    },
     navigation: {
       enabled: true,
       config: {
@@ -52,8 +40,18 @@ module.exports = ({ env }) => {
           "api::article.article": ["Slug"],
         },
         allowedLevels: 3,
-        gql: {
-          navigationItemRelated: ["Page", "UploadFile", "Article"],
+      },
+    },
+    graphql: {
+      enabled: true,
+      config: {
+        endpoint: "/graphql",
+        shadowCRUD: true,
+        playgroundAlways: true,
+        depthLimit: 7,
+        amountLimit: 100,
+        apolloServer: {
+          tracing: false,
         },
       },
     },
