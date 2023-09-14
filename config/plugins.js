@@ -29,6 +29,7 @@ module.exports = ({ env }) => {
             type: "string",
             label: "Icon",
             required: false,
+            enabled: true,
           },
         ],
         contentTypes: ["api::page.page", "api::article.article"],
