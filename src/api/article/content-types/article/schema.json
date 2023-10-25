@@ -24,11 +24,16 @@
       "targetField": "Title"
     },
     "CoverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Date": {
+      "type": "datetime",
+      "required": false
     }
   }
 }

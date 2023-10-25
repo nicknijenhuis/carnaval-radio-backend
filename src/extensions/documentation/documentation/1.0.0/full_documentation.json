@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-09-14T13:05:07.175Z"
+    "x-generation-date": "2023-10-25T19:25:47.324Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -117,6 +117,10 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "Date": {
+                "type": "string",
+                "format": "date-time"
               }
             }
           }
@@ -803,6 +807,10 @@
                 }
               }
             }
+          },
+          "Date": {
+            "type": "string",
+            "format": "date-time"
           },
           "createdAt": {
             "type": "string",
@@ -5419,6 +5427,39 @@
               },
               "PrimaryShade_1": {
                 "type": "string"
+              },
+              "PrimaryShade_2": {
+                "type": "string"
+              },
+              "PrimaryShade_3": {
+                "type": "string"
+              },
+              "Secondary": {
+                "type": "string"
+              },
+              "SecondaryShade_1": {
+                "type": "string"
+              },
+              "SecondaryShade_2": {
+                "type": "string"
+              },
+              "HeroBackground": {
+                "type": "string"
+              },
+              "SideBarBackground": {
+                "type": "string"
+              },
+              "ActiveTab": {
+                "type": "string"
+              },
+              "Tertiary": {
+                "type": "string"
+              },
+              "TertiaryShade_1": {
+                "type": "string"
+              },
+              "TertiaryShade_2": {
+                "type": "string"
               }
             }
           }
@@ -6107,6 +6148,39 @@
             "type": "string"
           },
           "PrimaryShade_1": {
+            "type": "string"
+          },
+          "PrimaryShade_2": {
+            "type": "string"
+          },
+          "PrimaryShade_3": {
+            "type": "string"
+          },
+          "Secondary": {
+            "type": "string"
+          },
+          "SecondaryShade_1": {
+            "type": "string"
+          },
+          "SecondaryShade_2": {
+            "type": "string"
+          },
+          "HeroBackground": {
+            "type": "string"
+          },
+          "SideBarBackground": {
+            "type": "string"
+          },
+          "ActiveTab": {
+            "type": "string"
+          },
+          "Tertiary": {
+            "type": "string"
+          },
+          "TertiaryShade_1": {
+            "type": "string"
+          },
+          "TertiaryShade_2": {
             "type": "string"
           },
           "createdAt": {
