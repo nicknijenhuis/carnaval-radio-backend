@@ -1,7 +1,6 @@
-export default {
+module.exports = {
     async beforeCreate(event) {
-        const { data } = event.params;
-
-        data.Date = new Date().toISOString().substring(0, 10);
+        console.log(event);
+        event.params.data.Date = new Date().toISOString().substring(0, 10);
     },
 }
