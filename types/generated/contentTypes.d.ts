@@ -1255,6 +1255,48 @@ export interface ApiStreamStream extends Schema.CollectionType {
   };
 }
 
+export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
+  collectionName: 'team';
+  info: {
+    singularName: 'team-member';
+    pluralName: 'team';
+    displayName: 'Team';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Story: Attribute.Blocks;
+    Phone: Attribute.String;
+    Birthdate: Attribute.Date;
+    DateJoined: Attribute.DateTime;
+    NickName: Attribute.String;
+    Photo: Attribute.Media;
+    Email: Attribute.Email;
+    City: Attribute.String;
+    Role: Attribute.String;
+    Color: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiThemeTheme extends Schema.SingleType {
   collectionName: 'themes';
   info: {
@@ -1345,6 +1387,7 @@ declare module '@strapi/types' {
       'api::sponsor.sponsor': ApiSponsorSponsor;
       'api::sponsor-type.sponsor-type': ApiSponsorTypeSponsorType;
       'api::stream.stream': ApiStreamStream;
+      'api::team-member.team-member': ApiTeamMemberTeamMember;
       'api::theme.theme': ApiThemeTheme;
     }
   }
