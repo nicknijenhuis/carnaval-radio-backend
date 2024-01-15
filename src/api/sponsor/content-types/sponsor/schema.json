@@ -36,6 +36,9 @@
     },
     "Link": {
       "type": "string"
+    },
+    "DisplayPriority": {
+      "type": "decimal"
     }
   }
 }

@@ -1164,6 +1164,7 @@ export interface ApiSponsorSponsor extends Schema.CollectionType {
     ActiveFrom: Attribute.Date;
     ActiveUntil: Attribute.Date;
     Link: Attribute.String;
+    DisplayPriority: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
