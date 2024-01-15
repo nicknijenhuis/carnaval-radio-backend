@@ -1280,6 +1280,7 @@ export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
     Role: Attribute.String;
     Color: Attribute.String &
       Attribute.CustomField<'plugin::color-picker.color'>;
+    Slug: Attribute.UID<'api::team-member.team-member', 'Name'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
