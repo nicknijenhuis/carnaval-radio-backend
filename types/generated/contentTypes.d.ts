@@ -1051,6 +1051,37 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
 }
 
+export interface ApiFeatureToggleFeatureToggle extends Schema.SingleType {
+  collectionName: 'feature_toggles';
+  info: {
+    singularName: 'feature-toggle';
+    pluralName: 'feature-toggles';
+    displayName: 'Feature Toggles';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    ShowTwitch: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::feature-toggle.feature-toggle',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::feature-toggle.feature-toggle',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1383,6 +1414,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::article.article': ApiArticleArticle;
       'api::event.event': ApiEventEvent;
+      'api::feature-toggle.feature-toggle': ApiFeatureToggleFeatureToggle;
       'api::page.page': ApiPagePage;
       'api::setting.setting': ApiSettingSetting;
       'api::slide.slide': ApiSlideSlide;

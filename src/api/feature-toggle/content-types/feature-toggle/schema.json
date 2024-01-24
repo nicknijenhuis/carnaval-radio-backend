@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "feature_toggles",
+  "info": {
+    "singularName": "feature-toggle",
+    "pluralName": "feature-toggles",
+    "displayName": "Feature Toggles"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ShowTwitch": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
