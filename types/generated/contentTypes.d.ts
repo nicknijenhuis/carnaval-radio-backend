@@ -403,9 +403,12 @@ export interface PluginUploadFile extends Schema.CollectionType {
     folderPath: Attribute.String &
       Attribute.Required &
       Attribute.Private &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -441,9 +444,12 @@ export interface PluginUploadFolder extends Schema.CollectionType {
   attributes: {
     name: Attribute.String &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     pathId: Attribute.Integer & Attribute.Required & Attribute.Unique;
     parent: Attribute.Relation<
       'plugin::upload.folder',
@@ -462,9 +468,12 @@ export interface PluginUploadFolder extends Schema.CollectionType {
     >;
     path: Attribute.String &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -503,6 +512,12 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     releasedAt: Attribute.DateTime;
+    scheduledAt: Attribute.DateTime;
+    timezone: Attribute.String;
+    status: Attribute.Enumeration<
+      ['ready', 'blocked', 'failed', 'done', 'empty']
+    > &
+      Attribute.Required;
     actions: Attribute.Relation<
       'plugin::content-releases.release',
       'oneToMany',
@@ -551,11 +566,13 @@ export interface PluginContentReleasesReleaseAction
       'morphToOne'
     >;
     contentType: Attribute.String & Attribute.Required;
+    locale: Attribute.String;
     release: Attribute.Relation<
       'plugin::content-releases.release-action',
       'manyToOne',
       'plugin::content-releases.release'
     >;
+    isEntryValid: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -697,6 +714,7 @@ export interface PluginNavigationNavigationItem extends Schema.CollectionType {
     menuAttached: Attribute.Boolean & Attribute.DefaultTo<false>;
     order: Attribute.Integer & Attribute.DefaultTo<0>;
     collapsed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    autoSync: Attribute.Boolean & Attribute.DefaultTo<true>;
     related: Attribute.Relation<
       'plugin::navigation.navigation-item',
       'oneToOne',
@@ -805,10 +823,13 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String &
-      Attribute.SetMinMax<{
-        min: 1;
-        max: 50;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
     code: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -993,9 +1014,9 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     Title: Attribute.String & Attribute.Required;
     Content: Attribute.RichText;
     Slug: Attribute.UID<'api::article.article', 'Title'>;
-    CoverImage: Attribute.Media;
+    CoverImage: Attribute.Media<'images'>;
     Date: Attribute.DateTime;
-    CoverVideo: Attribute.Media;
+    CoverVideo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1030,7 +1051,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     Date: Attribute.DateTime;
     Address: Attribute.String;
     Link: Attribute.String;
-    CoverImage: Attribute.Media;
+    CoverImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     IsHighlighted: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
@@ -1098,7 +1119,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     Title: Attribute.String & Attribute.Required;
     Content: Attribute.RichText;
     Slug: Attribute.UID<'api::page.page', 'Title'>;
-    Slider: Attribute.Media;
+    Slider: Attribute.Media<'images' | 'videos', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1153,7 +1174,8 @@ export interface ApiSlideSlide extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Image: Attribute.Media & Attribute.Required;
+    Image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
     Title: Attribute.String;
     Link: Attribute.String;
     createdAt: Attribute.DateTime;
@@ -1187,7 +1209,7 @@ export interface ApiSponsorSponsor extends Schema.CollectionType {
   };
   attributes: {
     Name: Attribute.String;
-    Logo: Attribute.Media;
+    Logo: Attribute.Media<'images'>;
     Type: Attribute.Relation<
       'api::sponsor.sponsor',
       'oneToOne',
@@ -1306,7 +1328,7 @@ export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
     Birthdate: Attribute.Date;
     DateJoined: Attribute.DateTime;
     NickName: Attribute.String;
-    Photo: Attribute.Media;
+    Photo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Email: Attribute.Email;
     City: Attribute.String;
     Role: Attribute.String;
@@ -1344,7 +1366,7 @@ export interface ApiThemeTheme extends Schema.SingleType {
   };
   attributes: {
     Name: Attribute.String;
-    Logo: Attribute.Media;
+    Logo: Attribute.Media<'images'>;
     BaseColor: Attribute.String &
       Attribute.Required &
       Attribute.CustomField<'plugin::color-picker.color'>;
